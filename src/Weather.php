@@ -1,15 +1,5 @@
 <?php
 
-/**.-------------------------------------------------------------------------------------------------------------------
- * |  Github: https://github.com/Tinywan
- * |  Blog: http://www.cnblogs.com/Tinywan
- * |--------------------------------------------------------------------------------------------------------------------
- * |  Author: Tinywan(ShaoBo Wan)
- * |  DateTime: 2019/1/15 15:51
- * |  Mail: 756684177@qq.com
- * |  Desc: 轮询调度算法
- * '------------------------------------------------------------------------------------------------------------------*/
-
 namespace Tinywan\Weather;
 
 use GuzzleHttp\Client;
@@ -18,26 +8,81 @@ use Tinywan\Weather\Exceptions\InvalidArgumentException;
 
 class Weather
 {
+    /**
+     * @var string
+     */
     protected $key;
 
+    /**
+     * @var array
+     */
     protected $guzzleOptions = [];
 
-    public function __construct(string $key)
+    /**
+     * Weather constructor.
+     *
+     * @param string $key
+     */
+    public function __construct($key)
     {
         $this->key = $key;
     }
 
+    /**
+     * @return \GuzzleHttp\Client
+     */
     public function getHttpClient()
     {
         return new Client($this->guzzleOptions);
     }
 
+    /**
+     * @param array $options
+     */
     public function setGuzzleOptions(array $options)
     {
         $this->guzzleOptions = $options;
     }
 
-    public function getWeather($city, string $type = 'base', string $format = 'json')
+    /**
+     * @param string $city
+     * @param string $format
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * @throws \Overtrue\Weather\Exceptions\HttpException
+     * @throws \Overtrue\Weather\Exceptions\InvalidArgumentException
+     */
+    public function getLiveWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'base', $format);
+    }
+
+    /**
+     * @param string $city
+     * @param string $format
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * @throws \Overtrue\Weather\Exceptions\HttpException
+     * @throws \Overtrue\Weather\Exceptions\InvalidArgumentException
+     */
+    public function getForecastsWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'all', $format);
+    }
+
+    /**
+     * @param string $city
+     * @param string $type
+     * @param string $format
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     *
+     * @throws \Overtrue\Weather\Exceptions\HttpException
+     * @throws \Overtrue\Weather\Exceptions\InvalidArgumentException
+     */
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
@@ -49,11 +94,14 @@ class Weather
             throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
         }
 
+        $format = \strtolower($format);
+        $type = \strtolower($type);
+
         $query = array_filter([
             'key' => $this->key,
             'city' => $city,
             'output' => $format,
-            'extensions' =>  $type,
+            'extensions' => $type,
         ]);
 
         try {
