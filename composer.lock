@@ -4,70 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5afacdeb2f22db3ef0e134504fd4109",
+    "content-hash": "f99a2dc623ed41e95f5359db6049f219",
     "packages": [
-        {
-            "name": "doctrine/instantiator",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/ae466f726242e637cebdd526a7d991b9433bacf1",
-                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "ext-pdo": "*",
-                "ext-phar": "*",
-                "phpbench/phpbench": "^0.13",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-shim": "^0.11",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/"
-                }
-            ],
-            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
-            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
-            "keywords": [
-                "constructor",
-                "instantiate"
-            ],
-            "time": "2019-10-21T16:45:58+00:00"
-        },
         {
             "name": "guzzlehttp/guzzle",
             "version": "6.5.3",
@@ -276,17 +214,17 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
-            "name": "hamcrest/hamcrest-php",
-            "version": "v2.0.0",
+            "name": "psr/http-message",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hamcrest/hamcrest-php.git",
-                "reference": "776503d3a8e85d4f9a1148614f95b7a608b046ad"
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/776503d3a8e85d4f9a1148614f95b7a608b046ad",
-                "reference": "776503d3a8e85d4f9a1148614f95b7a608b046ad",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -296,109 +234,344 @@
                 ]
             },
             "require": {
-                "php": "^5.3|^7.0"
-            },
-            "replace": {
-                "cordoval/hamcrest-php": "*",
-                "davedevelopment/hamcrest-php": "*",
-                "kodova/hamcrest-php": "*"
-            },
-            "require-dev": {
-                "phpunit/php-file-iterator": "1.3.3",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "^1.0"
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
-                "classmap": [
-                    "hamcrest"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "description": "This is the PHP port of Hamcrest Matchers",
-            "keywords": [
-                "test"
-            ],
-            "time": "2016-01-20T08:20:44+00:00"
-        },
-        {
-            "name": "mockery/mockery",
-            "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mockery/mockery.git",
-                "reference": "f69bbde7d7a75d6b2862d9ca8fab1cd28014b4be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/f69bbde7d7a75d6b2862d9ca8fab1cd28014b4be",
-                "reference": "f69bbde7d7a75d6b2862d9ca8fab1cd28014b4be",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "hamcrest/hamcrest-php": "~2.0",
-                "lib-pcre": ">=7.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~5.7.10|~6.5|~7.0|~8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Mockery": "library/"
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Pádraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
-                },
-                {
-                    "name": "Dave Marshall",
-                    "email": "dave.marshall@atstsolutions.co.uk",
-                    "homepage": "http://davedevelopment.co.uk"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "Mockery is a simple yet flexible PHP mock object framework",
-            "homepage": "https://github.com/mockery/mockery",
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
             "keywords": [
-                "BDD",
-                "TDD",
-                "library",
-                "mock",
-                "mock objects",
-                "mockery",
-                "stub",
-                "test",
-                "test double",
-                "testing"
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
             ],
-            "time": "2019-12-26T09:49:15+00:00"
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "symfony/polyfill-intl-idn",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-idn.git",
+                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3bff59ea7047e925be6b7f2059d60af31bb46d6a",
+                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php72": "^1.10"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurent Bassin",
+                    "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "idn",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-05-12T16:47:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
+                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-05-12T16:47:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "f048e612a3905f34931127360bdd2def19a5e582"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/f048e612a3905f34931127360bdd2def19a5e582",
+                "reference": "f048e612a3905f34931127360bdd2def19a5e582",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.17-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2020-05-12T16:47:27+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/ae466f726242e637cebdd526a7d991b9433bacf1",
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.13",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2019-10-21T16:45:58+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1123,108 +1296,6 @@
             "time": "2017-06-30T09:13:00+00:00"
         },
         {
-            "name": "psr/http-message",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2016-08-06T14:39:51+00:00"
-        },
-        {
-            "name": "ralouphie/getallheaders",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "120b605dfeb996808c31b6477290a714d356e822"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
-                "reference": "120b605dfeb996808c31b6477290a714d356e822",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^5 || ^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/getallheaders.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
-            "description": "A polyfill for getallheaders.",
-            "time": "2019-03-08T08:55:37+00:00"
-        },
-        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -1862,200 +1933,6 @@
             "time": "2020-05-12T16:14:59+00:00"
         },
         {
-            "name": "symfony/polyfill-intl-idn",
-            "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/3bff59ea7047e925be6b7f2059d60af31bb46d6a",
-                "reference": "3bff59ea7047e925be6b7f2059d60af31bb46d6a",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/polyfill-mbstring": "^1.3",
-                "symfony/polyfill-php72": "^1.10"
-            },
-            "suggest": {
-                "ext-intl": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.17-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Laurent Bassin",
-                    "email": "laurent@bassin.info"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "idn",
-                "intl",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2020-05-12T16:47:27+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.17-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2020-05-12T16:47:27+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "f048e612a3905f34931127360bdd2def19a5e582"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/f048e612a3905f34931127360bdd2def19a5e582",
-                "reference": "f048e612a3905f34931127360bdd2def19a5e582",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.17-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2020-05-12T16:47:27+00:00"
-        },
-        {
             "name": "symfony/yaml",
             "version": "v4.4.8",
             "source": {
@@ -2175,14 +2052,13 @@
             "time": "2020-04-18T12:12:48+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }
